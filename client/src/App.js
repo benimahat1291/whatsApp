@@ -1,25 +1,18 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Nav from "./components/Nav"
-import Page from "./pages/Page"
-import SubPage from "./pages/SubPage"
-
+import "./App.css"
+import Chat from "./components/Chat";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
-    <Router>
-      <div>
-        <Nav />
-        <Switch>
-          <Route exact path={["/","/home"]}>
-              <Page/>
-          </Route>
-          <Route exact path="/subpage/">
-              <SubPage/>
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+        <>
+        <div className="app">
+        <div className="app__body">
+        <Sidebar/>
+        <Chat/>
+        </div>
+        </div>
+        </>
   );
 }
 
